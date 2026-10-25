@@ -1,0 +1,50 @@
+[
+  {
+    "title": "7-Zip",
+    "desc": "一款开源的解压缩工具，没有会员、广告、捆绑，支持非常多的压缩格式，唯一的缺点是界面有点古老",
+    "image": "https://www.7-zip.org/7ziplogo.png",
+    "url": "https://www.7-zip.org/"
+  },
+  {
+    "title": "图吧工具箱",
+    "desc": "这个软件集成了很多测试电脑性能的工具，也有一些关于电脑硬件的辅助工具，除了那个流量卡也没有广告了",
+    "image": "icon/tbtool.png",
+    "url": "https://www.tbtool.cn"
+  },
+  {
+    "title": "ITELLYOU",
+    "desc": "免费提供纯净的系统镜像，很多搞开箱视频的都在使用，是MSDN的新版网站，就是需要登录而已",
+    "image": "https://static.itellyou.cn/images/logo.png",
+    "url": "https://next.itellyou.cn"
+  },
+  {
+    "title": "Visual Studo Code",
+    "desc": "简称VS Code，一款强大的代码编辑器，内置AI agent，汉化需要在左侧栏找到Extensions再搜索Chinese安装扩展",
+    "image": "https://code.visualstudio.com/favicon.ico",
+    "url": "https://code.visualstudio.com/"
+  },
+  {
+    "title": "VMware Workstation Pro",
+    "desc": "这是最火的虚拟机软件，几乎所有搞虚拟机测评的使用的都是它，自从被博通收购后就完全免费了，但也没有汉化了",
+    "image": "icon/vmware.ico",
+    "url": "https://www.vmware.com/"
+  },
+  {
+    "title": "QEMU",
+    "desc": "一款开源的虚拟机软件，与VMware不同的是它功能更强大，但操作对新手不友好，且只有linux系统才能最大化发挥性能。",
+    "image": "https://wiki.qemu.org/images/Qemu-logo-small.png",
+    "url": "https://www.qemu.org/"
+  },
+  {
+    "title": "github",
+    "desc": "全球最大的源代码管理平台，在这里有很多实用的开源项目，我的个人网站也是在这里建的，就是国内连接有点不稳定",
+    "image": "icon/github.svg",
+    "url": "https://github.com"
+  },
+  {
+    "title": "OBS Studio",
+    "desc": "一款免费开源的录屏软件，功能强大，效果也很好，深受各大主播喜爱。可别给他当成外挂了，那是一个插件",
+    "image": "https://obs.中国/images/obslogo.png",
+    "url": "https://obs.中国"
+  }
+]

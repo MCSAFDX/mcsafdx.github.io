@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>safdx 的个人网站</title>
+<meta name="description" content="safdx 的个人网站 —— 给自己团队做的系统都放在这里，可以直接下载。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0e13'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%234aa8ff'/%3E%3C/svg%3E">
+<script>
+/* 主题要在首次绘制前定好，免得先闪一下再变色 */
+(function () {
+  var m = document.cookie.match(/(?:^|;\s*)theme=(dark|light)/);
+  var saved = m ? m[1] : null;
+  /* cookie 拿不到时（比如用 file:// 直接打开）退回 localStorage */
+  if (!saved) {
+    try { saved = localStorage.getItem('theme'); } catch (e) { saved = null; }
+  }
+  if (saved !== 'dark' && saved !== 'light') saved = null;
+  var light = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  var useLight = saved === 'light' || (saved !== 'dark' && light);
+  document.documentElement.setAttribute('data-site-theme', useLight ? 'light' : 'dark');
+})();
+</script>
+<link rel="stylesheet" href="assets/css/style.css?v=11">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>safdx</a>
+    <nav class="nav">
+      <a href="index.html" class="is-active">首页</a>
+      <a href="tools.html">实用工具</a>
+      <a href="website.html">你的网站</a>
+    </nav>
+    <div class="theme-switch">
+      <button type="button" class="theme-btn" id="themeToggle" title="切换到浅色" aria-label="切换到浅色" aria-pressed="true">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 2.4v2.3M12 19.3v2.3M2.4 12h2.3M19.3 12h2.3M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20.4 14.4A8.7 8.7 0 0 1 9.6 3.6a8.7 8.7 0 1 0 10.8 10.8Z"
+                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <button class="nav-toggle" aria-label="切换导航菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">个人网站</p>
+      <h1 class="hero-title"><span class="grad-text">safdx 的个人网站</span></h1>
+      <p class="hero-sub">本人喜欢玩我的世界，我擅长指令，PVP 也会一点。还喜欢搞虚拟机，主要搞开箱和测病毒，为了让大家看到什么时候排到自己于是就搞了个排队机程序，<span class="dl-hint"><button type="button" class="dl-hint-link" id="dlHintBtn" aria-expanded="false" aria-controls="dlHintPop">点击这里可以下载</button><span class="dl-hint-pop" id="dlHintPop" role="group" aria-label="下载客户端">
+        <a href="downloads/queue_client.exe" class="js-download" download>Windows 客户端</a>
+        <a href="downloads/queue_client_high.apk" class="js-download" download>安卓客户端</a>
+      </span></span>。</p>
+
+      <div class="contact-card">
+        <p class="contact-row"><span class="contact-key">抖音名字：</span>SAFDX</p>
+        <p class="contact-row"><span class="contact-key">抖音号：</span>mcsafdx</p>
+        <p class="contact-row"><span class="contact-key">我的世界名字：</span>safdx指令师</p>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tools.html">
+          实用工具
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="btn btn-ghost" href="website.html">
+          我也想要有个人网站
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h9M8.5 4 12.5 8l-4 4" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="btn btn-ghost" href="https://www.douyin.com/user/MS4wLjABAAAAdR-91zfeiwKAZihuY0wtQ143TeGW-eubZFzVfm_bqbgr_n3xeeypaCwjlSwu5_VN"
+           target="_blank" rel="noopener noreferrer">
+          抖音主页
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M9.8 1.6h4.6v4.6M14.4 1.6 7.6 8.4M6.6 3.4H3.1A1.6 1.6 0 0 0 1.5 5v7.9a1.6 1.6 0 0 0 1.6 1.6H11a1.6 1.6 0 0 0 1.6-1.6V9.4"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span data-year>2026</span> safdx</span>
+    <span>静态站点，托管于 <a class="dl-hint-link" href="https://docs.github.com/zh/pages" target="_blank" rel="noopener noreferrer">GitHub Pages</a></span>
+  </div>
+</footer>
+
+<div class="modal" id="riskModal" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="riskModalTitle">
+    <h3 class="modal-title" id="riskModalTitle">下载提示</h3>
+    <p class="modal-text">该程序可能会被判定为风险程序，仅需选择信任、保留、无视风险即可，你不必担心安装到病毒</p>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-ghost btn-sm" data-modal-close>取消</button>
+      <a class="btn btn-primary btn-sm" id="riskConfirm" href="#" download>继续下载</a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js?v=17"></script>
+</body>
+</html>

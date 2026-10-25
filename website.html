@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>你的网站 — safdx 的个人网站</title>
+<meta name="description" content="想自己也搞一个个人网站？这里对比了 sxl 上线了和 GitHub Pages 两种做法的优缺点。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0e13'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%234aa8ff'/%3E%3C/svg%3E">
+<script>
+/* 主题要在首次绘制前定好，免得先闪一下再变色 */
+(function () {
+  var m = document.cookie.match(/(?:^|;\s*)theme=(dark|light)/);
+  var saved = m ? m[1] : null;
+  /* cookie 拿不到时（比如用 file:// 直接打开）退回 localStorage */
+  if (!saved) {
+    try { saved = localStorage.getItem('theme'); } catch (e) { saved = null; }
+  }
+  if (saved !== 'dark' && saved !== 'light') saved = null;
+  var light = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  var useLight = saved === 'light' || (saved !== 'dark' && light);
+  document.documentElement.setAttribute('data-site-theme', useLight ? 'light' : 'dark');
+})();
+</script>
+<link rel="stylesheet" href="assets/css/style.css?v=11">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>safdx</a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="tools.html">实用工具</a>
+      <a href="website.html" class="is-active">你的网站</a>
+    </nav>
+    <div class="theme-switch">
+      <button type="button" class="theme-btn" id="themeToggle" title="切换到浅色" aria-label="切换到浅色" aria-pressed="true">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 2.4v2.3M12 19.3v2.3M2.4 12h2.3M19.3 12h2.3M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20.4 14.4A8.7 8.7 0 0 1 9.6 3.6a8.7 8.7 0 1 0 10.8 10.8Z"
+                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <button class="nav-toggle" aria-label="切换导航菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">你的网站</p>
+      <h1 class="page-title">我也想要有个人网站</h1>
+      <p class="page-sub">我使用的是 GitHub Pages。目前我所知道的一共有两个选择，我给他们的优缺点都写出来了。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="compare-grid">
+
+        <article class="compare-card">
+          <h2 class="compare-name">sxl 上线了</h2>
+          <ul class="compare-list">
+            <li><span class="compare-tag is-pro">优点</span>很多人都在用这个，自带可视化创建网页工具，国内连接稳定</li>
+            <li><span class="compare-tag is-con">缺点</span>限制较多，比如不能直接放文件，免费版最多搞 5 个页面等</li>
+          </ul>
+          <a class="btn btn-primary compare-go" href="https://www.sxl.cn/" target="_blank" rel="noopener noreferrer">去 sxl.cn 看看</a>
+        </article>
+
+        <article class="compare-card">
+          <h2 class="compare-name">GitHub Pages</h2>
+          <ul class="compare-list">
+            <li><span class="compare-tag is-pro">优点</span>可以直接放文件，可以搞无数个页面，仓库大小理论上没有上限</li>
+            <li><span class="compare-tag is-con">缺点</span>但超过 1GB 会有风险，没有可视化工具，国内延迟较高</li>
+          </ul>
+          <a class="btn btn-primary compare-go" href="https://docs.github.com/zh/pages" target="_blank" rel="noopener noreferrer">去看 GitHub Pages 文档</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span data-year>2026</span> safdx</span>
+    <span>静态站点，托管于 <a class="dl-hint-link" href="https://docs.github.com/zh/pages" target="_blank" rel="noopener noreferrer">GitHub Pages</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=17"></script>
+</body>
+</html>
